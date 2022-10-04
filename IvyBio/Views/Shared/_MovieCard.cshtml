@@ -1,0 +1,22 @@
+﻿@model IvyBio.Models.Domain.Movie
+
+
+
+<div class="col-3 mb-3">
+    <a href="/movies/@Model.UrlSlug">
+        <img src="@Model.ImageUrl"
+             alt=""
+             class="mb-2" />
+        <div class="row mb-1">
+            <div class="name col">@Model.Title</div>
+            <div class="stars col text-end">
+                <i class="bi bi-star-fill"></i> @Model.Rate
+            </div>
+        </div>
+        <div class="row mb-1">
+            <div class="year col">@Model.Year</div>
+
+        </div>
+    </a>
+</div>
+

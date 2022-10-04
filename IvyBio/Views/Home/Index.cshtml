@@ -1,0 +1,21 @@
+﻿@using IvyBio.Models.ViewModels
+@model HomeIndexViewModel
+
+@{
+    Layout = "_Layout";
+}
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<section class=" mb-4">
+    <div class="text-center mb-4">Top Picks</div>
+    <div class="row">
+        @foreach (var movie in Model.TopMovies)
+        {
+
+            <partial name="_MovieCard" model="movie" />
+
+        }
+    </div>
+</section>

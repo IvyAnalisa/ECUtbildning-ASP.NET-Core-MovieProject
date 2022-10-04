@@ -1,0 +1,38 @@
+﻿@model IvyBio.Models.Domain.Movie
+@{
+    Layout = "_Layout";
+}
+
+<!--Movies Detail-->
+<main>
+    <section class="row mb-4">
+
+        <img src="@Model.ImageUrl"
+             class="d-block col-5"
+             alt="" />
+
+        <div class="col-7">
+            <h1 class="mb-3">@Model.Title</h1>
+            <div class="mb-3">@Model.Year</div>
+            <div class="stars mb-3">
+                <i class="bi bi-star-fill"></i> @Model.Rate
+            </div>
+            <!-- <video width="600" height="480" controls>
+                 <source src="@Model.Trailer">
+             </video>-->
+
+            <iframe width="560" height="315"
+                    src="@Model.Trailer"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+
+            <div class="mb-3">
+                @Model.Plot
+            </div>
+            <button class="p-2">Buy tickets</button>
+        </div>
+    </section>
+</main>
+
+
